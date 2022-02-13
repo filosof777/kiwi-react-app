@@ -1,0 +1,16 @@
+@import '../../assets/styles/main.scss';
+
+.ShowBtn {
+  @include bg-border-none;
+  @include font(15px, 600, $color-4e72ca);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  img {
+    margin-left: 7px;
+  }
+}

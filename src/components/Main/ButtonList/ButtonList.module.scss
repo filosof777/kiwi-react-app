@@ -1,0 +1,33 @@
+@import "../../../assets/styles/main.scss";
+
+.ButtonList {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  padding-bottom: 12px;
+
+  li {
+    position: relative;
+  }
+
+  .Active button {
+    color: $color-4e72ca;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+      width: 70%;
+      height: 3px;
+      background-color: $color-4e72ca;
+    }
+  }
+
+  button {
+    @include bg-border-none;
+    @include font(24px, 900, $color-9b9b9b);
+  }
+}

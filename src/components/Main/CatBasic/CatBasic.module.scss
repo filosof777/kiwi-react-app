@@ -1,0 +1,44 @@
+@import "../../../assets/styles/main.scss";
+
+.CategoryBasic {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 230px;
+  padding: 24px;
+  background-color: #fff;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: 20;
+  overflow: hidden;
+  justify-content: left;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.209296);
+
+  li {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+
+    &:hover button {
+      color: $color-4e72ca;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: $color-b4e2e1;
+      margin-right: 14px;
+      border: 2px solid $color-4e72ca;
+      border-radius: 50%;
+    }
+
+    button {
+      @include bg-border-none;
+      @include font(16px, 500, #000);
+      transition: $tr-color;
+    }
+  }
+}

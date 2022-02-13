@@ -1,0 +1,106 @@
+@import '../../../assets/styles/main.scss';
+
+.HeaderTop {
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .Logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 255px;
+
+    a {
+      width: 150px;
+      height: auto;
+    }
+
+    p {
+      @include font(15px, 300, #000);
+      font-style: italic;
+    }
+  }
+
+  .Nav {
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        a {
+          @include font(15px, 300, #000);
+          font-style: italic;
+          transition: $tr-color;
+        }
+
+        &:hover a {
+          color: $color-4e72ca;
+        }
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+
+  .Language {
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        button {
+          @include font(15px, 100, #000);
+          @include bg-border-none;
+          transition: $tr-color;
+        }
+
+        &:hover button {
+          color: $color-4e72ca;
+        }
+      }
+
+      li {
+        &:not(:last-child) {
+          padding-right: 15px;
+          border-right: 2px solid #000;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .Login {
+    ul {
+      display: flex;
+      align-items: center;
+
+      li {
+        button, a {
+          @include font(15px, 600, $color-4e72ca);
+          @include bg-border-none;
+          transition: $tr-color;
+          cursor: pointer;
+        }
+
+        &:hover button, a {
+          color: $color-4e72ca;
+        }
+      }
+
+      li {
+        &:not(:last-child) {
+          padding-right: 15px;
+          border-right: 2px solid $color-4e72ca;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

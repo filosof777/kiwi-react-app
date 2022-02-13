@@ -1,0 +1,201 @@
+@import "../../../assets/styles/main.scss";
+
+.Single {
+  padding: 20px 0;
+  background-color: $color-f2f2f2;
+
+  h1 {
+    @include font(34px, 500, $color-414d6a);
+    margin-bottom: 16px;
+  }
+
+  .Content {
+    display: flex;
+    gap: 30px;
+
+    .ImageWrapper {
+      display: flex;
+      width: 555px;
+      height: 456px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 16px;
+
+        li {
+          border: 1px solid transparent;
+
+          &:hover img {
+            transform: scale(0.95);
+          }
+
+          &:hover {
+            border-color: #000;
+          }
+
+          img {
+            width: 75px;
+            height: 75px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      img {
+        width: 456px;
+        height: 456px;
+      }
+    }
+
+    .Description {
+      width: 500px;
+
+      .Data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 18px;
+
+        p {
+          @include font(14px, normal, $color-414d6a);
+        }
+      }
+
+      h2 {
+        @include font(47px, 500, $color-444444);
+        margin-bottom: 10px;
+      }
+
+      .Address {
+        @include font(14px, 600, $color-4e72ca);
+        text-decoration: underline;
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      .Tel {
+        position: relative;
+        @include bg-border-none;
+        @include font(16px, bold, #000);
+        border-radius: 30px;
+        width: 340px;
+        height: 38px;
+        background-color: $color-19d476;
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+        padding-left: 20px;
+
+        span {
+          position: absolute;
+          top: 0;
+          right: 0;
+          @include font(15px, normal, #000);
+          background-color: $color-11b463;
+          border-radius: 30px;
+          padding: 10px 20px;
+          margin-left: 15px;
+        }
+      }
+
+      .Author {
+        @include font(14px, normal, #000);
+        margin-bottom: 24px;
+        display: inline-block;
+
+        a {
+          @include font(14px, 600, $color-11b463);
+          text-decoration: underline;
+        }
+      }
+
+      .ButtonList {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 24px;
+
+        li:nth-child(1) button {
+          background-color: $color-304fff;
+        }
+
+        li:nth-child(2) button {
+          background-color: $color-4e72ca;
+        }
+
+        button {
+          @include bg-border-none;
+          @include font(14px, 800, #fff);
+          border-radius: 30px;
+          padding: 15px 30px;
+        }
+        img {
+          margin-left: 8px;
+        }
+
+        &:hover {
+          color: $color-4e72ca;
+        }
+      }
+
+      .Text {
+        @include font(15px, 500, $color-414d6a);
+        margin-bottom: 20px;
+      }
+
+      .List {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        li {
+          border: $border;
+          padding: 14px;
+          p {
+            @include font(12px, 500, #000);
+          }
+          a,
+          span {
+            display: block;
+          }
+          a {
+            @include font(14px, 500, $color-4e72ca);
+            text-decoration: underline;
+          }
+          span {
+            @include font(14px, 500, #000);
+          }
+        }
+      }
+
+      .Info {
+        margin-bottom: 40px;
+        padding: 14px;
+        border: $border;
+
+        span {
+          @include font(12px, 500, #000);
+        }
+
+        p {
+          @include font(14px, 500, $color-4e72ca);
+          text-decoration: underline;
+        }
+      }
+
+      .Hint {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          @include font(14px, 500, #000);
+        }
+        button {
+          @include bg-border-none;
+          @include font(14px, 500, $color-d0021b);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,320 @@
+@import "../../../assets/styles/main.scss";
+
+.Login {
+  background-color: #fff;
+
+  .Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Registration {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+
+      form {
+
+        .Text {
+          color: red;
+          position: relative;
+          top: -20px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          display: none;
+        }
+        .StepOne {
+
+          h2 {
+            @include font(24px, bold, #000);
+            margin-bottom: 78px;
+          }
+
+          input {
+            @include font(19px, 500, #000);
+            background-color: transparent;
+            width: 330px;
+            border: $border;
+            padding: 20px 26px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 5px;
+            margin-bottom: 26px;
+          }
+
+          button {
+            @include font(19px, 500, #fff);
+            width: 330px;
+            height: 62px;
+            border-radius: 5px;
+            border: none;
+            background-color: $color-19d476;
+            margin-bottom: 42px;
+          }
+        }
+
+        .StepTwo {
+          text-align: left;
+          width: 330px;
+
+          .Text {
+            color: red;
+            position: relative;
+            top: -20px;
+          }
+
+          label {
+            text-align: left;
+            display: block;
+            margin-bottom: 8px;
+          }
+
+          .Email {
+            @include font(19px, 500, #000);
+            width: 100%;
+            background-color: transparent;
+            border: $border;
+            border-radius: 5px;
+            padding: 20px 26px;
+            margin-bottom: 28px;
+          }
+
+          .Input {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            
+            input:nth-child(1) {
+              @include font(19px, 500, #000);
+              width: 82px;
+              padding: 20px;
+              background-color: transparent;
+              border: $border;
+              border-radius: 5px;
+            }
+
+            input:nth-child(2) {
+              @include font(19px, 500, #000);
+              width: 230px;
+              padding: 20px 26px;
+              background-color: transparent;
+              border: $border;
+              border-radius: 5px;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              display: none;
+            }
+          }
+          span {
+            display: inline-block;
+            @include font(12px, 600, #000);
+            margin-bottom: 28px;
+
+            a {
+              margin-right: 5px;
+              @include font(12px, 600, $color-304fff);
+            }
+          }
+
+          .Button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 56px;
+
+            button:nth-child(1) {
+              border: none;
+              width: 82px;
+              height: 62px;
+              background: #ffffff;
+              box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.279127);
+              border-radius: 5px;
+
+              img {
+                width: 13px;
+                height: 20px;
+              }
+            }
+
+            button:nth-child(2) {
+              width: 230px;
+              height: 62px;
+              background-color: #41d481;
+              @include font(17px, 500, #fff);
+              border: none;
+              border-radius: 5px;
+            }
+          }
+        }
+
+        .StepThree {
+          width: 330px;
+          text-align: left;
+
+          p {
+            @include font(17px, 600, #787993);
+            margin-bottom: 12px;
+          }
+
+          div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            input {
+              @include font(19px, 500, $color-414d6a);
+              padding: 20px 24px;
+              width: 230px;
+              height: 62px;
+              border-radius: 5px;
+              border: $border;
+            }
+
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 82px;
+              height: 62px;
+              background-color: #ccc;
+              border-radius: 5px;
+            }
+          }
+
+          .Input {
+            @include font(19px, 500, $color-414d6a);
+            width: 100%;
+            padding: 20px 24px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: 1px solid #304fff;
+            margin-bottom: 32px;
+          }
+
+          button {
+            width: 100%;
+            height: 62px;
+            border: none;
+            border-radius: 5px;
+            background-color: #41d481;
+            @include font(17px, 500, #fff);
+            margin-bottom: 78px;
+          }
+        }
+
+        .StepFour {
+          width: 330px;
+          text-align: left;
+
+          p {
+            text-align: center;
+            @include font(17px, 500, $color-304fff);
+            margin-bottom: 12px;
+          }
+          
+          input {
+            @include font(19px, 500, $color-414d6a);
+            width: 100%;
+            padding: 20px 24px;
+            border-radius: 5px;
+            border: $border;
+            background-color: transparent;
+            margin-bottom: 32px;
+          }
+
+          label {
+            margin-bottom: 8px;
+            display: block;
+            @include font(17px, 500, #787993);
+          }
+          
+          a {
+            width: 100%;
+            padding: 20px 24px;
+            display: inline-block;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: #41d481;
+            @include font(17px, 500, #fff);
+            margin-bottom: 78px;
+          }
+        }
+      }
+
+      .LoginFooter {
+        width: 330px;
+
+        p {
+          @include font(14px, 500, #979797);
+          position: relative;
+          margin-bottom: 28px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 45%;
+            height: 2px;
+            background-color: #979797;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 45%;
+            height: 2px;
+            background-color: #979797;
+          }
+        }
+
+        a {
+          @include font(16px, bold, $color-4e72ca);
+        }
+      }
+    }
+
+    .Image {
+      position: relative;
+      width: 650px;
+      height: 100vh;
+      background-image: url("../../../assets/images/login.png");
+
+      div {
+        width: 275px;
+        height: 275px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 165px;
+        left: 60px;
+        padding: 80px 40px 40px 40px;
+        border-radius: 220px 220px 220px 25px;
+
+        img {
+          margin-bottom: 8px;
+        }
+
+        p {
+          @include font(19px, bold, #787993);
+          margin-bottom: 18px;
+        }
+
+        button {
+          padding: 10px 18px;
+          border: 2px solid #41d481;
+          @include font(14px, bold, #41d481);
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

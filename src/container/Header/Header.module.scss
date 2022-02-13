@@ -1,0 +1,173 @@
+@import "../../assets/styles/main.scss";
+
+.Header {
+  box-shadow: $box-shadow;
+  padding: 16px 0;
+
+  .HeaderTop {
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 220px;
+
+      a {
+        width: 150px;
+        height: auto;
+      }
+
+      p {
+        @include font(15px, 100, #000);
+        font-style: italic;
+      }
+    }
+
+    .Nav {
+
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          a {
+            @include font(15px, 100, #000);
+            font-style: italic;
+            transition: $tr-color;
+          }
+
+          &:hover a {
+            color: $color-4e72ca;
+          }
+        }
+
+        li {
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
+        }
+      }
+    }
+
+    .Language {
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          button {
+            @include font(15px, 100, #000);
+            @include bg-border-none;
+            transition: $tr-color;
+          }
+
+          &:hover button {
+            color: $color-4e72ca;
+          }
+        }
+
+        li {
+          &:not(:last-child) {
+            padding-right: 15px;
+            border-right: 2px solid #000;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+
+    .Login {
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          button {
+            @include font(15px, 100, $color-4e72ca);
+            @include bg-border-none;
+            transition: $tr-color;
+          }
+
+          &:hover button {
+            color: $color-4e72ca;
+          }
+        }
+
+        li {
+          &:not(:last-child) {
+            padding-right: 15px;
+            border-right: 2px solid $color-4e72ca;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .HeaderBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    form {
+      position: relative;
+      width: 870px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 30px;
+      border: $border;
+
+      input {
+        @include bg-border-none;
+        @include font(15px, 500, #000);
+        padding: 0 25px;
+        height: 100%;
+      }
+
+      .Search {
+        border-left: $border;
+        border-right: $border;
+        width: 360px;
+      }
+
+      button {
+        @include bg-border-none;
+        @include font(14px, 500, #fff);
+        background-color: $color-19d476;
+        padding: 0 25px;
+        height: 45px;
+        border-radius: 30px;
+      }
+    }
+
+    button {
+      position: relative;
+      @include bg-border-none;
+      @include font(15px, bold, #fff);
+      background-color: $color-19d476;
+      padding: 0 25px 0 54px;
+      height: 45px;
+      border-radius: 30px;
+
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        @include font(28px, bold, #fff);
+        background-color: $color-11b463;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

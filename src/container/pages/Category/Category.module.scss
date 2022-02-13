@@ -1,0 +1,331 @@
+@import "../../../assets/styles/main.scss";
+
+.Category {
+  padding: 32px 0;
+  background-color: $color-f2f2f2;
+  form {
+    background-color: #fff;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    border: 1px solid rgba(151, 151, 151, 0.496575);
+    border-radius: 6px;
+    margin-bottom: 12px;
+
+    img {
+      margin-right: 18px;
+      width: 24px;
+      height: 24px;
+    }
+
+    input {
+      @include bg-border-none;
+      @include font(16px, 500, #000);
+      width: 250px;
+      outline: none;
+    }
+
+    a {
+      text-decoration: underline;
+      @include font(16px, 500, $color-304fff);
+    }
+  }
+
+  .Country {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+
+    p {
+      @include font(13px, bold, transparent);
+      padding: 4px 12px;
+      border-radius: 4px;
+    }
+
+    li:nth-child(1) p {
+      background: #e5e3ff;
+      color: #704fff;
+    }
+
+    li:nth-child(2) p {
+      background: #e4f6ff;
+      color: #57b4e2;
+    }
+
+    li:nth-child(3) p {
+      background: #d2ffdb;
+      color: #47b95e;
+    }
+
+    li:nth-child(4) p {
+      background: #f6dac2;
+      color: #874c1a;
+    }
+
+    li:nth-child(5) p,
+    li:nth-child(6) p,
+    li:nth-child(7) p {
+      background: #d8d8d8;
+      color: #787993;
+    }
+  }
+
+  .Top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+
+    p {
+      @include font(16px, 600, #787993);
+      margin-right: 56px;
+    }
+
+    .Wrapper {
+      background-color: #fff;
+      width: 472px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: $border;
+      padding: 8px;
+      border-radius: 40px;
+
+      ul {
+        display: flex;
+        gap: 8px;
+
+        .Close {
+          @include bg-border-none;
+          @include font(15px, 500, $color-304fff);
+          border-radius: 40px;
+          padding: 12px 50px 12px 20px;
+          border: 1px solid $color-304fff;
+          background-color: #ebf5ff;
+          position: relative;
+
+          button {
+            @include bg-border-none;
+            position: absolute;
+            top: 0;
+            right: -1px;
+            width: 43px;
+            border-radius: 40px;
+            height: 42px;
+            border: 1px solid $color-304fff;
+            img {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .Slider {
+      width: 950px;
+      height: 5px;
+      position: relative;
+      background: #b6cafb;
+      border-radius: 5px;
+
+      div {
+        height: 100%;
+        left: 25%;
+        right: 25%;
+        position: absolute;
+        border-radius: 5px;
+        background: #2979ff;
+      }
+    }
+
+    .Input {
+      position: relative;
+      margin-bottom: 20px;
+
+      input {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: -5px;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &[type="range"]::-webkit-slider-thumb {
+          height: 17px;
+          width: 17px;
+          border-radius: 50%;
+          background: #ebf5ff;
+          border: 1px solid #2979ff;
+          pointer-events: auto;
+          -webkit-appearance: none;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+
+          &[type="range"]::-moz-range-thumb {
+            height: 17px;
+            width: 17px;
+            border: none;
+            border-radius: 50%;
+            background: #17a2b8;
+            pointer-events: auto;
+            -moz-appearance: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+          }
+        }
+      }
+    }
+    .Text {
+      text-align: center;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+
+    p {
+      @include font(16px, 600, #787993);
+    }
+  }
+
+  .Sort {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 30px;
+
+    a {
+      @include font(14px, bold, $color-414d6a);
+
+      img {
+        margin-left: 44px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  .TopList {
+    padding: 12px 0;
+    display: grid;
+    grid-template-columns: repeat(4, calc(25% - 21px));
+    grid-gap: 28px;
+    margin-bottom: 18px;
+
+    .Top {
+      width: 114px;
+      height: 114px;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+
+      img {
+        width: 114px;
+        height: 114px;
+        position: absolute;
+      }
+
+      p {
+        @include font(14px !important, bold !important, #000 !important);
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        transform: rotateZ(-45deg);
+      }
+    }
+
+    li {
+      background-color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0px 0px 21px 0px rgba(34, 60, 80, 0.2);
+      border-radius: 5px;
+      transition: $tr-box-shadow;
+
+      &:hover {
+        box-shadow: 0px 0px 21px 0px rgba(34, 60, 80, 0.6);
+      }
+
+      img {
+        cursor: pointer;
+        object-fit: contain;
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+      }
+
+      .Desc {
+        padding: 12px 8px 8px 8px;
+        background-color: #41D48139;
+
+        p:nth-child(1) {
+          @include font(16px, 500, #000);
+          margin-bottom: 4px;
+        }
+
+        p:nth-child(2) {
+          @include font(12px, normal, #000);
+          margin-bottom: 4px;
+        }
+
+        p:nth-child(3) {
+          @include font(16px, 500, #000);
+        }
+      }
+    }
+  }
+
+  .Search {
+    .Top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+
+      p {
+        @include font(20px, bold, $color-414d6a);
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      border-left: $border;
+      border-right: $border;
+      margin-bottom: 40px;
+
+      .Text {
+        @include font(16px, bold, $color-4e72ca);
+        margin-bottom: 8px;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 8px;
+          width: 14px;
+          height: 14px;
+        }
+
+        p {
+          @include font(14px, 500, #AAAAB6)
+        }
+      }
+    }
+  }
+}
